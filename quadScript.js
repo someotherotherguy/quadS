@@ -24,37 +24,6 @@ var init = {
     console.log(canvasOffset);
   }
 }
-// function init() {
-//   canvas= document.getElementById("mycanvas");
-//   context = canvas.getContext("2d");
-//   console.log('canvas is loaded into context');
-//   w = 600;
-//   h = 400;
-//   k = 10;
-//   kDif = 0;
-//   QF();
-//   canvas.width = w;
-//   canvas.height = h;
-//   quadGrapher.gridInitialize();
-//   quadGrapher.equationGrapher();
-//   canvasOffset = $("#mycanvas").offset();
-//   offsetX = Math.round(canvasOffset.left),
-//   offsetY = Math.round(canvasOffset.top); 
-// canvas.addEventListener("mousemove", doMouseMove, false);
-//   console.log(johnLenon.isKill);
-//   $("#answers").hide;
-//   // window.requestAnimationFrame(aCircle());//there's a thing called request animation that I should probably use...
-// }  // close init
-
-// function aCircle() {
-//   i += 0.25;
-//   context.clearRect(0,0,w,h);
-//   start = i;
-//   context.beginPath();
-//   context.arc(300,200,10,start,full);
-//   context.stroke();
-//   window.requestAnimationFrame(aCircle());
-// }
 
 function doMouseMove(event) {
     // always know where ther mouse is located
