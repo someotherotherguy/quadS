@@ -25,6 +25,7 @@ var init = {
   }
 }
 
+
 function doMouseMove(event) {
     // always know where ther mouse is located
   resetCanvas();
@@ -182,9 +183,10 @@ function solutions() {
 function results() {
   // finding vertext and displaying symline and yint results
   vX = -(b*1)/(2*a);
-  vY = a*Math.pow(vX,2)+b*vX+c*1;
+  vY = evaluate(vX);
   $(".vertex").text("Vertex is at (" + vX+","+vY+")");
   solutions();
+  $("#vertexForm").text("Vertex Form is y = "+a+"(x-"+vX+")^2 + "+vY);
 }  // close results()
 
 function evaluate(xt) {
