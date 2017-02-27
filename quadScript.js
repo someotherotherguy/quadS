@@ -148,7 +148,7 @@ function QF() {
   // getting values to do quadratic formula
   a = Number($("#cubicA").val());
   b = Number($("#quadB").val());
-  c = Number($("#linc").val());
+  c = Number($("#linC").val());
   d = Number($("#constant").val());
   w = Number($("#canvasWidth").val());
   h = Number($("#canvasHeight").val());
