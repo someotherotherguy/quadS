@@ -1,2 +1,2 @@
-# quadS
-You can view the web page [here](https://someotherotherguy.github.io/quadS/).
+# cubic-grapher
+This is an experiment to see how easily I could convert my quadratic equation grapher into a cubic equation grapher. Not very easily, as it seems.
