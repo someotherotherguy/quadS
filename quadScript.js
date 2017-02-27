@@ -1,5 +1,5 @@
 //Javascript for drawing and calculating quadratics 2017
-var a, b, c, context, w = 600, h = 400, wHalf = w/2, hHalf = h/2, k = 10, kDif = 0, start = 0, full = Math.PI * 2, shouldUpdate = true, vX, vY, aM = 10, pointX = 0, pointY = 0, x1Exists = false, x2Exists = false;
+var a, b, c, d, context, w = 600, h = 400, wHalf = w/2, hHalf = h/2, k = 10, kDif = 0, start = 0, full = Math.PI * 2, shouldUpdate = true, vX, vY, aM = 10, pointX = 0, pointY = 0, x1Exists = false, x2Exists = false;
 
 var init = {
   fullReset: function() {
@@ -146,9 +146,10 @@ function resetCanvas() {
 
 function QF() {
   // getting values to do quadratic formula
-  a = Number($("#quadA").val());
-  b = Number($("#linB").val());
-  c = Number($("#constant").val());
+  a = Number($("#cubicA").val());
+  b = Number($("#quadB").val());
+  c = Number($("#linc").val());
+  d = Number($("#constant").val());
   w = Number($("#canvasWidth").val());
   h = Number($("#canvasHeight").val());
   k = Number($("#canvasGridSize").val());
@@ -156,7 +157,7 @@ function QF() {
   canvas.height = h;
   wHalf = w/2;
   hHalf = h/2;
-  console.log(a,b,c);
+  console.log(a,b,c,d);
   results();
 }  // close QF
 
@@ -193,7 +194,7 @@ function solutions() {
 
 function results() {
   // finding vertext and displaying symline and yint results
-  vX = -(b*1)/(2*a);
+  vX = -(b*1)/(2*a);//lol
   vY = evaluate(vX);
   $(".vertex").text("Vertex is at (" + vX+","+vY+")");
   solutions();
@@ -201,5 +202,5 @@ function results() {
 }  // close results()
 
 function evaluate(xt) {
-  return a*Math.pow(xt,2)+b*xt+c*1;
+  return a*Math.pow(xt,3)+b*Math.pow(xt,2)+c*xt+d;
 }
