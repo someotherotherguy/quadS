@@ -41,11 +41,11 @@ function doMouseMove(event) {
 }  // end doMouseMove
 
 function graphDot(color, px, py) {
-    context.strokeStyle = color;
-    context.fillStyle = color;
-    context.beginPath();
-    context.arc(px, py, 5, 0, 2*Math.PI);
-    context.fill();
+  context.strokeStyle = color;
+  context.fillStyle = color;
+  context.beginPath();
+  context.arc(px, py, 5, 0, 2*Math.PI);
+  context.fill();
 }
 
 var quadGrapher = {
@@ -104,8 +104,19 @@ var quadGrapher = {
       context.lineTo(wHalf+nx*k, hHalf-ny*k);
       context.stroke();
     }
+    //graphs x intercepts and vertex dots
     if (x1Exists) {graphDot("blue", x1*k+wHalf, hHalf);}
     if (x2Exists) {graphDot("orange", x2*k+wHalf, hHalf);}
+    graphDot("green", vX*k+wHalf, -(vY*k)+hHalf);
+
+    //graph vertical line of symmetry
+    context.setLineDash([10, 10]);
+    context.lineWidth = 3;
+    context.beginPath();
+    context.moveTo(vX*k+wHalf, 5);
+    context.lineTo(vX*k+wHalf, h-5);
+    context.stroke();
+    context.setLineDash([0]);
   },
   zoom: {
     in: function() {
