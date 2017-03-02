@@ -5,13 +5,11 @@ var init = {
   fullReset: function() {
     canvas= document.getElementById("mycanvas");
     context = canvas.getContext("2d");
-    console.log('canvas is loaded into context');
     w = 600;
     h = 400;
     k = 10;
     this.recalc(); 
     canvas.addEventListener("mousemove", doMouseMove, false);
-    console.log(johnLenon.isKill);
     $("#answers").hide;
   },
   recalc: function() {
@@ -21,7 +19,7 @@ var init = {
     canvasOffset = $("#mycanvas").offset();
     offsetX = Math.round(canvasOffset.left),
     offsetY = Math.round(canvasOffset.top);
-    console.log(canvasOffset);
+    //console.log(canvasOffset);
   }
 }
 
@@ -156,7 +154,6 @@ function QF() {
   canvas.height = h;
   wHalf = w/2;
   hHalf = h/2;
-  console.log(a,b,c);
   results();
 }  // close QF
 
@@ -186,7 +183,6 @@ function solutions() {
     } else {
         x2Exists = false;
     }
-    console.log(x1 + ", " + x2);
   }
 
 }
