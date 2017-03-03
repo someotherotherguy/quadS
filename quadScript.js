@@ -57,6 +57,7 @@ var quadGrapher = {
     xW = h/2;
     yW = w/2;
     //x axis
+    context.setLineDash([0]);//On mobile (at least ios), dash property fails to reset unless this happens
     context.lineWidth=3;
     context.strokeStyle = "black";
     context.beginPath();
