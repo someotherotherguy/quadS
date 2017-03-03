@@ -8,14 +8,19 @@ var init = {
     w = 600;
     h = 400;
     k = 10;
-    this.recalc(); 
+    init.recalc();
+    this.resize();
+    //$(window).on("resize", this.resize());
     canvas.addEventListener("mousemove", doMouseMove, false);
+    window.addEventListener("resize", this.resize);
     $("#answers").hide;
   },
   recalc: function() {
     kDif = 0;
     QF();
     resetCanvas();
+  },
+  resize: function() {
     canvasOffset = $("#mycanvas").offset();
     offsetX = Math.round(canvasOffset.left),
     offsetY = Math.round(canvasOffset.top);
