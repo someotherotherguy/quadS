@@ -8,7 +8,7 @@ var init = {
     w = 600;
     h = 400;
     k = 10;
-    init.recalc();
+    this.recalc();
     this.resize();
     //$(window).on("resize", this.resize());
     canvas.addEventListener("mousemove", doMouseMove, false);
@@ -18,6 +18,7 @@ var init = {
   recalc: function() {
     kDif = 0;
     QF();
+    this.resize();
     resetCanvas();
   },
   resize: function() {
